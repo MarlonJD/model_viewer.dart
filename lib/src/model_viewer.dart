@@ -265,4 +265,11 @@ class _ModelViewerState extends State<ModelViewer> {
   Future<Uint8List> _readFile(final String path) async {
     return await File(path).readAsBytes();
   }
+
+  static Future<bool> get _isLoadedModel async {
+    if (ModelViewer.isStarted == true && ModelViewer.isFinished == true) {
+      return true
+    }
+    return false
+  }
 }
