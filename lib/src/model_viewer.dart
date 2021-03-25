@@ -85,8 +85,8 @@ class ModelViewer extends StatefulWidget {
   /// via AR Quick Look.
   final String iosSrc;
 
-  bool isStarted;
-  bool isFinished;
+  static bool isStarted;
+  static bool isFinished;
 
   @override
   State<ModelViewer> createState() => _ModelViewerState();
