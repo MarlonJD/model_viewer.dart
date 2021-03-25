@@ -161,10 +161,10 @@ class _ModelViewerState extends State<ModelViewer> {
         return NavigationDecision.prevent;
       },
       onPageStarted: (final String url) {
-        widget.isStarted = true;
+        ModelViewer.isStarted = true;
       },
       onPageFinished: (final String url) {
-        widget.isFinished = true;
+        ModelViewer.isFinished = true;
       },
       onWebResourceError: (final WebResourceError error) {
         print(
