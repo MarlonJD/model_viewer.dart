@@ -85,6 +85,9 @@ class ModelViewer extends StatefulWidget {
   /// via AR Quick Look.
   final String iosSrc;
 
+  bool isStarted;
+  bool isFinished;
+
   @override
   State<ModelViewer> createState() => _ModelViewerState();
 }
@@ -158,10 +161,10 @@ class _ModelViewerState extends State<ModelViewer> {
         return NavigationDecision.prevent;
       },
       onPageStarted: (final String url) {
-        //print('>>>> ModelViewer began loading: <$url>'); // DEBUG
+        widget.isStarted = true;
       },
       onPageFinished: (final String url) {
-        //print('>>>> ModelViewer finished loading: <$url>'); // DEBUG
+        widget.isFinished = true;
       },
       onWebResourceError: (final WebResourceError error) {
         print(
