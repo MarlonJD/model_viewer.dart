@@ -192,7 +192,7 @@ class _ModelViewerState extends State<ModelViewer> {
 
   Future<void> _initProxy() async {
     ModelViewer.isStarted = false;
-    ModelViewer.isFinished = true;
+    ModelViewer.isFinished = false;
     final url = Uri.parse(widget.src);
     _proxy = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
     _proxy.listen((final HttpRequest request) async {
